@@ -27,17 +27,26 @@ html, body {
 }
 
 .login-button {
-    padding: 10px 20px;
     background-color: #0CB985;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 89px;
+    height: 34px;
 }
 
 .main{
     display: flex;
     justify-content: center;
+}
+
+.todo{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .black-board{
@@ -47,6 +56,31 @@ html, body {
     background: #009E52;
 
     margin-bottom: 100px;
+}
+
+.main input{
+    width: 629px;
+    height: 102px;
+    border-radius: 10px;
+    border: none;
+    font-size: 35px;
+    margin-right: 26px;
+    padding-left: 25px;
+    
+}
+
+.add{
+    width: 145px;
+    height: 102px;
+    border: none;
+    cursor: pointer;
+    color: #E9D200;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #2200AC;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .modal {
