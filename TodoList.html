@@ -37,13 +37,13 @@
 
     <div class="modal" id="signupModal">
         <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
+            <span class="close-button" onclick="closeSignupModal()">&times;</span>
             <div style="position: relative;">
-                <input type="text" id="idInput" placeholder="아이디" />
-                <button style="position: absolute; top: 80px; right: 20px;" onclick="someFunction()">중복확인</button>
+                <input type="text" id="signupId" placeholder="아이디" />
+                <button style="position: absolute; top: 80px; right: 20px;" onclick="checkDuplicate()">중복확인</button>
             </div>
-            <input type="password" id="passwordInput" placeholder="비밀번호" />
-            <button class="modal-login-button" onclick="login()">회원가입</button>
+            <input type="password" id="signupPassword" placeholder="비밀번호" />
+            <button class="modal-login-button" onclick="signup()">회원가입</button>
         </div>
     </div>
 

@@ -18,6 +18,10 @@ function openSignupModal() {
 function closeSignupModal() {
     // 회원가입 모달을 닫음
     document.getElementById("signupModal").style.display = "none";
+
+    // 회원가입 모달의 input 필드 초기화
+    document.getElementById("signupId").value = "";
+    document.getElementById("signupPassword").value = "";
 }
 
 
@@ -114,3 +118,50 @@ function adjustBlackBoardHeight() {
         blackBoard.style.height = newHeight + "px";
     }
 }
+
+
+// 회원가입 버튼을 눌렀을 때 실행되는 함수
+function signup() {
+    // 입력된 아이디와 비밀번호 가져오기
+    var signupId = document.getElementById("signupId").value;
+    var signupPassword = document.getElementById("signupPassword").value;
+
+    // // 중복 체크
+    // if (isDuplicate(signupId)) {
+    //     alert("이미 사용 중인 아이디입니다.");
+    //     return;
+    // }
+
+    // 사용자 정보를 배열에 추가
+    users.push({ id: signupId, password: signupPassword });
+
+    // 모달 닫기
+    closeSignupModal();
+}
+
+// 중복확인 버튼을 눌렀을 때 실행되는 함수
+function checkDuplicate() {
+    var signupId = document.getElementById("signupId").value;
+
+    // 중복 여부를 체크
+    if (isDuplicate(signupId)) {
+        alert("이미 사용 중인 아이디입니다.");
+    } else {
+        alert("사용 가능한 아이디입니다.");
+    }
+}
+
+// 아이디 중복 여부를 체크하는 함수
+function isDuplicate(id) {
+    return users.some(function(user) {
+        return user.id === id;
+    });
+}
+
+// 사용자 정보를 담을 배열
+var users = [
+    { id: "user1", password: "pass1" },
+    { id: "user2", password: "pass2" },
+    { id: "user3", password: "pass3" }
+];
+
