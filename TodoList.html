@@ -28,13 +28,26 @@
     <div class="modal" id="loginModal">
         <div class="modal-content">
             <span class="close-button" onclick="closeModal()">&times;</span>
-            <input type="id" placeholder="아이디" />
-            <input type="password" placeholder="비밀번호" />
-            <button class="modal-login-button">로그인</button>
-            <button class="signin-button">아직 회원이 아니라면? 회원가입하러 가기</button>
+            <input type="text" id="idInput" placeholder="아이디" />
+            <input type="password" id="passwordInput" placeholder="비밀번호" />
+            <button class="modal-login-button" onclick="login()">로그인</button>
+            <button class="signin-button" onclick="openSignupModal()">아직 회원이 아니라면? 회원가입하러 가기</button>
         </div>
     </div>
-    
+
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div style="position: relative;">
+                <input type="text" id="idInput" placeholder="아이디" />
+                <button style="position: absolute; top: 80px; right: 20px;" onclick="someFunction()">중복확인</button>
+            </div>
+            <input type="password" id="passwordInput" placeholder="비밀번호" />
+            <button class="modal-login-button" onclick="login()">회원가입</button>
+        </div>
+    </div>
+
     <script src="TodoList.js"></script>
+
 </body>
 </html>

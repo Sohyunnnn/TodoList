@@ -1,3 +1,5 @@
+// import auth from './Auth';
+
 function openModal() {
     document.getElementById("loginModal").style.display = "flex";
 }
@@ -5,6 +7,19 @@ function openModal() {
 function closeModal() {
     document.getElementById("loginModal").style.display = "none";
 }
+
+function openSignupModal() {
+    // 로그인 모달을 닫음
+    document.getElementById("loginModal").style.display = "none";
+    // 회원가입 모달을 나타나게 함
+    document.getElementById("signupModal").style.display = "flex";
+}
+
+function closeSignupModal() {
+    // 회원가입 모달을 닫음
+    document.getElementById("signupModal").style.display = "none";
+}
+
 
 function addTodo() {
     // 새로운 할 일을 생성
@@ -99,5 +114,3 @@ function adjustBlackBoardHeight() {
         blackBoard.style.height = newHeight + "px";
     }
 }
-
-
