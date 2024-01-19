@@ -154,3 +154,36 @@ html, body {
     background-color: white;
     margin-top: 24px;
 }
+
+.todos-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.todos{
+    width: 800px;
+    height: 102px;
+    color: #000;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 38px;
+    padding: 30px 0 30px 25px;
+    
+}
+
+.complete-button,
+.delete-button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #000000;
+}
+
+.complete-button:hover,
+.delete-button:hover {
+    text-decoration: underline; /* 마우스 호버 시 밑줄 표시 */
+}
