@@ -126,17 +126,35 @@ function signup() {
     var signupId = document.getElementById("signupId").value;
     var signupPassword = document.getElementById("signupPassword").value;
 
-    // // 중복 체크
-    // if (isDuplicate(signupId)) {
-    //     alert("이미 사용 중인 아이디입니다.");
-    //     return;
-    // }
+    // 중복 체크
+    if (isDuplicate(signupId)) {
+        alert("이미 사용 중인 아이디입니다.");
+        return;
+    }
+
+    // 비밀번호 유효성 검사: 영어와 숫자의 조합인지 확인
+    if (!isValidPassword(signupPassword)) {
+        alert("비밀번호는 영어와 숫자의 조합이어야 합니다.");
+        return;
+    }
 
     // 사용자 정보를 배열에 추가
     users.push({ id: signupId, password: signupPassword });
 
+    alert("회원가입이 완료되었습니다.");
+
     // 모달 닫기
     closeSignupModal();
+}
+
+// 비밀번호 유효성 검사 함수
+function isValidPassword(password) {
+    // 비밀번호에 영어와 숫자가 모두 포함되어 있는지 확인
+    var hasLetter = /[a-zA-Z]/.test(password);
+    var hasNumber = /\d/.test(password);
+
+    // 영어와 숫자가 모두 포함되어 있어야 유효한 비밀번호로 간주
+    return hasLetter && hasNumber;
 }
 
 // 중복확인 버튼을 눌렀을 때 실행되는 함수
